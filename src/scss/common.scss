@@ -1,1 +1,31 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+
+	&__main-block {
+		
+	}
+	&__categories {
+	}
+	&__advantages {
+	}
+}
+
+.title {
+	text-align: center;
+	&__value {
+		font-weight: 600;
+		font-size:rem(18);		
+		line-height: math.div(27 , 18);
+		color: #FFCC00;
+	}
+
+	&__label {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 55, 30);
+		
+		line-height: math.div(82 , 55);
+		color: #231900;
+
+		
+	}
+}

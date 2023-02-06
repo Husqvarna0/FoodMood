@@ -1,11 +1,13 @@
 //====================================================================================================
 
 .header {
+	z-index: 5;
 	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
 	padding: rem(35) rem(0);
+
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -14,28 +16,102 @@
 
 	&__logo {
 		font-weight: 700;
-		font-size: rem(18);
+		@include adaptiveValue("font-size", 18, 14);
+	
 		line-height: math.div(27 , 18);
 	}
-
+	&__body{
+		display: flex;
+		
+		@include adaptiveValue("column-gap", 54, 20);
+	}
 	&__menu {
 		display: flex;
 		align-items: center;
 
 	}
+	&__actions {
+		@media (max-width:$mobile){
+			 display: flex;
+			 gap: rem(54);
+			 align-items: center; 
+		}
+		@media (max-width:$mobileSmall){
+			gap: rem(24);
+		}
+	}
+
+	&__button {
+		padding: rem(13) rem(46);
+		background-color: $yellowColor;		
+		font-weight: 700;
+		@include adaptiveValue("font-size", 14, 10);		
+		line-height: math.div(21 , 14);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				color: #000;
+				background-color: #dfb304;	
+			}
+		}
+		@media (max-width:$mobile){
+			padding: rem(13) rem(26);
+		}
+		@media (max-width:$mobileSmall){
+			padding: rem(8) rem(16);
+		}
+	}
 }
 .menu {
-
+	
 	&__body {
 		&:not(:last-child) {
 			padding-right: rem(54);
 		}
+		@media (max-width:$mobile){
+			z-index: 5;
+			position: fixed;
+		  top: 0;
+		  left: -100%;
+		  width: 100%;
+		  height: 100%;
+		  transition: all 0.3s ease 0s;
+		  overflow: auto;
+		  background-color: #000; 
+		  padding: rem(70) rem(15) rem(30) rem(15);
+
+		  &::before{
+			  content:'';
+			  position: fixed; 
+			  top: 0;
+			  left: -100%;
+			  width: 100%;
+			  transition: all 0.3s ease 0s;
+			  height: rem(60);
+			 
+			  z-index: 2;
+		  }
+
+		  .menu-open &{
+			  left: 0;
+			  &::before{
+				  left: 0;
+				  
+			  }
+		  }
+  }
 	}
 
 	&__list {
 		display: flex;
-		
+		@include adaptiveValue("gap", 44, 30);
 		gap: rem(44);
+		@media (max-width:$mobile){
+			
+			 flex-direction: column; 
+			 
+			 align-items: center;
+		}
 
 		
 	}
@@ -47,47 +123,47 @@
 	&__link {
 	
 		font-weight: 700;
+		@include adaptiveValue("font-size", 14, 10);
 		font-size: rem(14);
 		line-height: math.div(21 , 14);
       transition: all 0.3s ease 0s;
 		@media (any-hover: hover){
 			&:hover{
-				color: #FFCC00;
+				color: $yellowColor;
 			}
+		}
+		@media (max-width:$mobile){
+			font-size: rem(26);
+			
 		}
 	}
 
 
-	&__button {
-		padding: rem(13) rem(46);
-		background-color: #FFCC00;		
-		font-weight: 700;
-		font-size: rem(14);
-		line-height: math.div(21 , 14);
-		transition: all 0.3s ease 0s;
-		@media (any-hover: hover){
-			&:hover{
-				color: #fff;
-				background-color: #dfb304;	
-			}
-		}
+	&__icon {
 	}
+
+	
+
+}
+.icon-menu {
 }
 
 
 //====================================================================================================
 
+
 //Burger
-/*
+
 .icon-menu {
 	display: none;
+	z-index: 15;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
 		width: rem(30);
 		height: rem(18);
 		cursor: pointer;
-		z-index: 5;
+		z-index: 15;
 		span,
 		&::before,
 		&::after {
@@ -97,7 +173,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $yellowColor;
 		}
 		&::before {
 			top: 0;
@@ -126,4 +202,4 @@
 		}
 	}
 }
-*/
+

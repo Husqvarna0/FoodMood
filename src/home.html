@@ -1,17 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-				
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__main-block main-block">
+				<div class="main-block__container">
+					<div class="main-block__header">
+						<div class="main-block__subtitle">Only $15.00</div>
+						<h1 class="main-block__title">AUTHENTIC ITALIAN PIZZA</h1>
+					</div>
+					<div class="main-block__body">
+						<div class="main-block__content">
+							<div class="main-block__discont discont">
+								<span class="discont__percent">20%</span>
+								<p class="discont__text">discount</p>
+							</div>
+							<div class="main-block__description">On your first
+								order, if you order
+								online through
+								our App!</div>
+						</div>
+						<a href="" class="main-block__button">ORDER ONLINE</a>
+					</div>
+				</div>
+				<div class="main-block__background">
+					<img src="img/main/background.png" alt="background">
+				</div>
+			</section>
+			<section class="page__categories categories">
+				<div class="categories__container">
+					<div class="categories__title title">
+						<div class="title__value">TOP FOODS</div>
+						<h2 class="title__label">Our Categories</h2>
+					</div>
+					<div class="categories__columns">
+						<div class="categories__column column-categories">
+							<div class="column-categories__image"><img src="img/categories/pizza.svg" alt="pizza"></div>
+							<div class="column-categories__label">Pizza</div>
+							<div class="column-categories__amount">20 Restaurants Foods</div>
+						</div>
+						<div class="categories__column column-categories">
+							<div class="column-categories__image"><img src="img/categories/pasta.svg" alt="pasta"></div>
+							<div class="column-categories__label">Pasta</div>
+							<div class="column-categories__amount">15 Restaurants Foods</div>
+						</div>
+						<div class="categories__column column-categories">
+							<div class="column-categories__image"><img src="img/categories/shakes.svg" alt="shakes"></div>
+							<div class="column-categories__label">Shakes</div>
+							<div class="column-categories__amount">20 Restaurants Foods</div>
+						</div>
+						<div class="categories__column column-categories">
+							<div class="column-categories__image"><img src="img/categories/burger.svg" alt="burger"></div>
+							<div class="column-categories__label">Burger</div>
+							<div class="column-categories__amount">25 Restaurants Foods</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__advantages advantages">
+				<div class="advantages__container">
+					<div class="advantages__columns">
+						<div class="advantages__column column-advantages">
+							<div class="column-advantages__item">
+								<div class="column-advantages__icon"><img src="img/avantages/shipping.svg" alt="shipping"></div>
+								<div class="column-advantages__label">Free Shipping on
+									First Order</div>
+								<div class="column-advantages__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+							</div>
+							<div class="column-advantages__item">
+								<div class="column-advantages__icon"><img src="img/avantages/dishes.svg" alt="dishes"></div>
+								<div class="column-advantages__label">Variety of
+									Dishes</div>
+								<div class="column-advantages__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+							</div>
+							<div class="column-advantages__item">
+								<div class="column-advantages__icon"><img src="img/avantages/times.svg" alt="times"></div>
+								<div class="column-advantages__label">Thirty Minutes
+									Delivery</div>
+								<div class="column-advantages__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>
