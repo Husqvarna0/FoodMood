@@ -620,24 +620,21 @@
 		color: $yellowColor;
 		text-transform: uppercase;
 
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: rem(-30);
-			border-bottom: 5px solid $yellowColor;
-
-			width: rem(205);
-		}
+		
 	}
 
 	&__label {
 		font-weight: 600;
-		@include adaptiveValue("font-size", 55, 30);
+		@include adaptiveValue("font-size", 55, 28);
 
 		line-height: math.div(82, 55);
 		color: #231900;
 
-
+	}
+	&__border{
+		padding-top: rem(25);
+		border-bottom: 5px solid $yellowColor;
+		width: rem(205);
 	}
 }
 
