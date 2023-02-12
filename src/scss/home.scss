@@ -17,99 +17,97 @@
 	&__subtitle {
 		font-weight: 700;
 		@include adaptiveValue("font-size", 26, 14);
-		
-		line-height: math.div(39 , 26);
-		
+
+		line-height: math.div(39, 26);
+
 	}
 
 	&__title {
 		padding: rem(25) rem(0) rem(39) rem(0);
 		font-weight: 600;
 		@include adaptiveValue("font-size", 64, 48);
-		line-height: math.div(96 , 64);
+		line-height: math.div(96, 64);
 
 	}
 
-	&__body {
-	
-	}
+	&__body {}
 
 	&__content {
 		display: flex;
 		@include adaptiveValue("gap", 50, 30);
 		@include adaptiveValue("padding-bottom", 92, 60);
 
-		@media (max-width:$mobileSmall){
-			 flex-direction: column; 
-			 gap: rem(90);
-			 
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
+			gap: rem(90);
+
 		}
-		
+
 	}
 
 	&__discont {
 		position: relative;
 		font-weight: 700;
-		
+
 		@include adaptiveValue("font-size", 32, 26);
-		line-height: math.div(48 , 32);
-		
+		line-height: math.div(48, 32);
+
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-transform: uppercase;
 		padding-top: rem(15);
-		
 
-		&::before{
-			content:'';
+
+		&::before {
+			content: '';
 			z-index: 1;
 			position: absolute;
 			background-color: $yellowColor;
 			border-radius: 50%;
-			
+
 			width: rem(205);
-			height: rem(205);	
+			height: rem(205);
 		}
 
-		@media (max-width:$mobileSmall){
-			 align-items: flex-start; 
+		@media (max-width:$mobileSmall) {
+			align-items: flex-start;
 		}
 	}
 
-	
+
 
 	&__description {
 		@include adaptiveValue("font-size", 36, 24);
 		font-weight: 600;
-		
-		line-height: math.div(64 , 36);
+
+		line-height: math.div(64, 36);
 		@include adaptiveValue("max-width", 324, 200);
 
-		@media (max-width:$mobileSmall){
-			flex-direction: column; 
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
 			gap: rem(90);
 			max-width: fit-content;
-	  }
-		
+		}
+
 	}
 
 	&__button {
-		
+
 		max-width: fit-content;
 		padding: rem(13) rem(54);
-		background-color: $yellowColor;		
+		background-color: $yellowColor;
 		font-weight: 700;
 		font-size: rem(14);
-		line-height: math.div(21 , 14);
+		line-height: math.div(21, 14);
 
 		transition: all 0.3s ease 0s;
 
 
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				color: #000;
-				background-color: #dfb304;	
+				background-color: #dfb304;
 			}
 		}
 	}
@@ -121,27 +119,29 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-			img{
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				object-fit: cover;
-			}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
 		}
+	}
 }
 
 .discont {
 	padding-left: rem(22);
+
 	&__percent {
-		padding-top: rem(30);		
+		padding-top: rem(30);
 		font-weight: 700;
 		font-size: rem(64);
-		line-height: math.div(76 , 64);
+		line-height: math.div(76, 64);
 		z-index: 5;
 
-		@media (max-width:$mobileSmall){
+		@media (max-width:$mobileSmall) {
 			padding-left: rem(32);
 		}
 
@@ -151,12 +151,14 @@
 		z-index: 5;
 		font-weight: 700;
 		font-size: rem(32);
-		line-height: math.div(48 , 32);
-		@media (max-width:$mobileSmall){
+		line-height: math.div(48, 32);
+
+		@media (max-width:$mobileSmall) {
 			padding-left: rem(22);
 		}
 	}
-	@media (max-width:$mobileSmall){
+
+	@media (max-width:$mobileSmall) {
 		padding-left: rem(0);
 	}
 
@@ -166,61 +168,61 @@
 
 
 .categories {
-color: #000;
-padding: rem(27) rem(0) rem(40) rem(0);
-	&__container {
-	}
+	color: #000;
+	padding: rem(27) rem(0) rem(40) rem(0);
 
-	&__title {
-	}
+	&__container {}
+
+	&__title {}
 
 	&__columns {
 		padding-top: rem(112);
 		display: flex;
 		justify-content: space-between;
-		@media (max-width:$mobile){
+
+		@media (max-width:$mobile) {
 			flex-wrap: wrap;
-			row-gap:  rem(50);
-			
+			row-gap: rem(50);
+
 		}
-		@media (max-width: em(620)){
+
+		@media (max-width: em(620)) {
 			align-items: center;
 			justify-content: center;
 		}
-		
-	
+
+
 	}
 
-	&__column {
-		
-	}
+	&__column {}
 }
 
 .column-categories {
-	
-	
-	
+
+
+
 
 	display: grid;
-	
+
 	gap: rem(14);
 	justify-items: center;
 	align-items: end;
 
-	
+
 
 	&__image {
-		
-	
-		
-		
-		img{
-			position: relative;;
+
+
+
+
+		img {
+			position: relative;
+			;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;   
-			object-fit: cover;	
+			height: 100%;
+			object-fit: cover;
 
 		}
 	}
@@ -228,23 +230,25 @@ padding: rem(27) rem(0) rem(40) rem(0);
 	&__label {
 		font-weight: 700;
 		@include adaptiveValue("font-size", 24, 10);
-		
-		line-height: math.div(36 , 24);
+
+		line-height: math.div(36, 24);
 		color: #231900;
-		@media (max-width:$mobile){
-			  font-size: rem(24);
+
+		@media (max-width:$mobile) {
+			font-size: rem(24);
 		}
 	}
 
 	&__amount {
 		@include adaptiveValue("font-size", 20, 8);
 		font-weight: 600;
-	
-		line-height: math.div(30 , 20);
+
+		line-height: math.div(30, 20);
 		color: #231900;
-		@media (max-width:$mobile){
+
+		@media (max-width:$mobile) {
 			font-size: rem(20);
-	 }
+		}
 	}
 }
 
@@ -252,27 +256,25 @@ padding: rem(27) rem(0) rem(40) rem(0);
 
 
 .advantages {
-background-color: $yellowColor;
-padding: rem(43) rem(0) rem(58) rem(0);
+	background-color: $yellowColor;
+	padding: rem(43) rem(0) rem(58) rem(0);
 
-	&__container {
-	}
+	&__container {}
 
-	&__columns {
-
-	}
+	&__columns {}
 
 	&__column {
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width:$mobile){
+		@media (max-width:$mobile) {
 
-			 flex-direction: column; 
-			 gap: rem(50);
+			flex-direction: column;
+			gap: rem(50);
 		}
 	}
 }
+
 .column-advantages {
 
 	&__item {
@@ -295,29 +297,31 @@ padding: rem(43) rem(0) rem(58) rem(0);
 	&__label {
 		padding: rem(42) rem(0) rem(22) rem(0);
 		font-weight: 700;
-		font-size:   rem(20);		
-		line-height: math.div(30 , 20);
+		font-size: rem(20);
+		line-height: math.div(30, 20);
 		color: #FFFFFF;
-		max-width: rem(171);		
+		max-width: rem(171);
 		text-align: center;
 
-		@media (max-width:$mobile){
+		@media (max-width:$mobile) {
 			padding: rem(22) rem(0) rem(22) rem(0);
-			
+
 		}
 	}
 
 	&__description {
 		font-weight: 600;
-		
-		@include adaptiveValue("font-size", 17, 8);	
-		line-height: math.div(26 , 17);
+
+		@include adaptiveValue("font-size", 17, 8);
+		line-height: math.div(26, 17);
 		color: #FFFFFF;
 		text-align: center;
-		@media (max-width:$tablet){
+
+		@media (max-width:$tablet) {
 			max-width: rem(230);
 		}
-		@media (max-width:$mobile){
+
+		@media (max-width:$mobile) {
 			max-width: rem(430);
 			font-size: rem(17);
 		}
@@ -334,17 +338,17 @@ padding: rem(43) rem(0) rem(58) rem(0);
 	padding: rem(76) rem(0) rem(44) rem(0);
 
 
-	&__title {
-	}
+	&__title {}
 
 	&__columns {
 		padding-top: rem(24);
 		display: flex;
 		justify-content: space-between;
-		@media (max-width:$mobile){
-			 flex-direction: column; 
-			 gap: rem(30);
-			 padding-top: rem(54);
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			gap: rem(30);
+			padding-top: rem(54);
 		}
 	}
 
@@ -353,31 +357,31 @@ padding: rem(43) rem(0) rem(58) rem(0);
 		place-items: center;
 	}
 }
+
 .title {
 
-	&__value {
-	}
+	&__value {}
 
-	&__label {
-	}
+	&__label {}
 }
+
 .column-outlets {
 
 	&__image {
-		
-		
-		 
-		  img{
+
+
+
+		img {
 			@include adaptiveValue("height", 440, 100);
 			width: auto;
 
-			@media (max-width:$mobile){
+			@media (max-width:$mobile) {
 				@include adaptiveValue("height", 440, 300);
 			}
-		  
-		
-		  }
-		
+
+
+		}
+
 	}
 
 	&__icon {
@@ -387,11 +391,18 @@ padding: rem(43) rem(0) rem(58) rem(0);
 
 	&__address {
 		font-weight: 700;
-		
+
 		@include adaptiveValue("font-size", 20, 14);
-		
-		line-height: math.div(30 , 20);
+
+		line-height: math.div(30, 20);
 		text-align: center;
+		transition: all 0.3s ease 0s;
+		
+		@media (any-hover: hover){
+			&:hover{
+				color: $yellowColor;
+			}
+		}
 
 
 
@@ -401,60 +412,328 @@ padding: rem(43) rem(0) rem(58) rem(0);
 
 //========================================================================================================================================================
 
-.page {
 
-	&__started {
-	}
-}
 .started {
+	position: relative;
+	padding: rem(108) rem(0) rem(0) rem(0);
 
 	&__container {
+		display: grid;
+		grid-template-columns: 1fr minmax(rem(10), rem(585));
+		gap: rem(30);
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr;
+			place-items: center;
+
+			gap: rem(50);
+		}
 	}
 
+	&__main-block {}
+
 	&__title {
+		position: relative;
+		text-align: start;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: rem(-16);
+			border-bottom: 5px solid $yellowColor;
+			width: rem(175);
+		}
 	}
 
 	&__body {
+		color: #231900;
+		padding: rem(32) rem(0) rem(0) rem(0);
+
 	}
 
 	&__content {
+		max-width: rem(585);
 	}
 
 	&__image {
+
+		position: relative;
+
+		img {
+
+
+			@include adaptiveValue("padding-top", 0, 300);
+			@include adaptiveValue("max-width", 585, 100);
+			height: auto;
+
+			@media (max-width:$tablet) {
+				@include adaptiveValue("min-width", 585, 300);
+				padding-top: rem(0);
+
+
+			}
+
+		}
+
+
 	}
 }
+
 .title {
 
-	&__value {
-	}
+	&__value {}
 
-	&__label {
-	}
+	&__label {}
 }
+
 .content-started {
 
 	&__label {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 26, 18);
+		line-height: math.div(39, 26);
+		padding-bottom: rem(16);
 	}
 
 	&__text {
+		font-weight: 400;
+		font-size: rem(17);
+		line-height: math.div(26, 17);
+		display: inline-block;
+
 	}
 
 	&__columns {
+		display: flex;
+
+		@media (max-width:$mobile) {
+			gap: rem(20);
+		}
+
+		@media (max-width:rem(495)) {
+			flex-direction: column;
+		}
+
+	}
+
+	&__column {}
+}
+
+.column-content-started {
+	padding: rem(41) rem(0) rem(0) rem(0);
+	max-width: rem(277);
+
+
+
+	&__icon {}
+
+	&__label {
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: math.div(30, 20);
+		padding: rem(19) rem(0) rem(8) rem(0);
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: rem(17);
+		line-height: math.div(26, 17);
+
+	}
+}
+
+
+
+//========================================================================================================================================================
+
+.team {
+	padding: rem(134) rem(0) rem(65) rem(0);
+
+	&__container {}
+
+	&__title {
+		position: relative;
+
+
+
+
+
+	}
+
+	&__columns {
+		padding-top: rem(109);
+		display: flex;
+		justify-content: space-between;
+		gap: rem(15);
+
+		@media (max-width:$mobile) {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			row-gap: rem(30);
+		}
 	}
 
 	&__column {
+		display: grid;
+		color: #231900;
+	}
+
+	&__image {
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+		position: relative;
+
+		img {
+
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+
+	&__name {
+		padding: rem(37) rem(0) rem(13) rem(0);
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div(36, 24);
+
+	}
+
+	&__position {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: math.div(30, 20);
+
 	}
 }
-.column-content-started {
 
-	&__icon {
+.team-title {
+	display: grid;
+	place-items: center;
+
+	&__value {
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		color: $yellowColor;
+		text-transform: uppercase;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: rem(-30);
+			border-bottom: 5px solid $yellowColor;
+
+			width: rem(205);
+		}
 	}
 
 	&__label {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 55, 30);
+
+		line-height: math.div(82, 55);
+		color: #231900;
+
+
 	}
 }
-.olumn-content-started {
 
-	&__text {
+//========================================================================================================================================================
+
+.discount {
+	background: linear-gradient(91.02deg, #FFCC00 17.25%, rgba(255, 204, 0, 0) 178.38%);
+	padding: rem(65) rem(0) rem(135) rem(0);
+
+
+	&__container {
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			justify-items: center;
+			gap: rem(70);
+		}
+	}
+
+	&__body {
+		@media (max-width:$mobile) {
+			display: grid;
+			place-items: center;
+			text-align: center;
+		}
+	}
+
+	&__label {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 55, 30);
+		line-height: math.div(82, 55);
+
+	}
+
+	&__description {
+		padding: rem(32) rem(0) rem(73) rem(0);
+		font-weight: 600;
+		@include adaptiveValue("font-size", 26, 18);
+		line-height: math.div(39, 26);
+	}
+
+	&__icons {
+		display: flex;
+		gap: rem(12);
+
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
+		}
+	}
+
+	&__icon {}
+
+	&__image {
+
+		position: relative;
+
+		img {
+			@include adaptiveValue("width", 585, 100);
+
+			@media (max-width:$mobile) {
+				width: rem(300);
+			}
+		}
+
+
+	}
+}
+
+//========================================================================================================================================================
+
+
+.brands {
+	padding: rem(75) rem(0) rem(75) rem(0);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: rem(50);
+
+		@media (max-width:$mobile) {
+
+			justify-content: center;
+		}
+	}
+
+	&__image {
+		transition: box-shadow 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+
+				box-shadow: 0px 13px 19px rgb(0 0 0 / 7%);
+			}
+		}
 	}
 }

@@ -1,14 +1,21 @@
 // Заголовки, общие БЄМ блоки и проче...
 .page {
 
-	&__main-block {
-		
+	&__main-block {		
 	}
 	&__categories {
 	}
 	&__advantages {
 	}
 	&__outlets {
+	}
+	&__started {
+	}
+	&__team {
+	}
+	&__discount {
+	}
+	&__brands {
 	}
 }
 
@@ -18,7 +25,8 @@
 		font-weight: 600;
 		font-size:rem(18);		
 		line-height: math.div(27 , 18);
-		color: #FFCC00;
+		color: $yellowColor;
+		text-transform: uppercase;
 	}
 
 	&__label {
@@ -31,3 +39,6 @@
 		
 	}
 }
+
+//========================================================================================================================================================
+
